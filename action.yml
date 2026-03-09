@@ -1,0 +1,25 @@
+name: Unnix
+author: figsoda
+description: Use Nix packages without installing Nix
+
+branding:
+  color: black
+  icon: download-cloud
+
+inputs:
+  directory:
+    description: Directory containing the unnix manifest
+    default: .
+  version:
+    description: Version of unnix to install
+    default: 0.1.0-alpha.2
+
+runs:
+  using: composite
+  steps:
+    - name: Set up unnix
+      shell: bash
+      run: "$GITHUB_ACTION_PATH/setup.sh"
+      env:
+        INPUT_DIRECTORY: ${{ inputs.directory }}
+        INPUT_VERSION: ${{ inputs.version }}

@@ -1,0 +1,7 @@
+packages {
+  actionlint
+  shellcheck out
+  shfmt
+  typos
+  zizmor
+}
