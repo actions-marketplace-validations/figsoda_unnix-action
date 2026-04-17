@@ -1,6 +1,6 @@
 name: Unnix action
 author: figsoda
-description: Use Nix packages without installing Nix
+description: Reproducible Nix environments without installing Nix
 
 branding:
   color: black
